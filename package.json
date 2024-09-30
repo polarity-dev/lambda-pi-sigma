@@ -1,0 +1,45 @@
+{
+  "name": "lambda-pi-sigma",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file .env dist/wrapper.js",
+    "start:withSourcemaps": "node --env-file .env --enable-source-maps dist/wrapper.js",
+    "build:dev": "tsx --env-file .env build.ts build",
+    "build": "tsx build.ts build:lambda",
+    "watch": "tsx --env-file .env build.ts watch",
+    "dev": "npm run build:dev && npm run watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.658.1",
+    "@aws-sdk/client-sts": "^3.658.1",
+    "@aws-sdk/credential-providers": "^3.658.1",
+    "@aws-sdk/types": "^3.662.0",
+    "@kitajs/ts-html-plugin": "^4.1.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.7.4",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.0",
+    "esbuild-style-plugin": "^1.6.3",
+    "eslint": "^9.11.1",
+    "fastify": "^5.0.0",
+    "fs-extra": "^11.2.0",
+    "htmx.org": "^2.0.2",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@kitajs/html": "^4.2.2"
+  }
+}

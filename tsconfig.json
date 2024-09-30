@@ -1,0 +1,25 @@
+{
+  // eslint does not support arrays for the "extends" property of tsconfig.json, commenting for now
+  // https://github.com/typescript-eslint/typescript-eslint/issues/7499
+  // "extends": [ "@tsconfig/strictest/tsconfig.json", "@tsconfig/node20/tsconfig.json" ],
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx", "tests/**/*", "wrapper.ts", "build.ts"],
+  "compilerOptions": {
+    "rootDir": "./",
+    "lib": [ "esnext", "dom", "WebWorker" ],
+    "resolveJsonModule": true,
+    "target": "ES2017",
+    "module": "ESNext",
+    "types": ["node"],
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@kitajs/html",
+    "plugins": [
+      {
+        "name": "@kitajs/ts-html-plugin"
+      }
+    ]
+  }
+}
